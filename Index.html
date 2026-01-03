@@ -1,0 +1,267 @@
+<!-- Guarda este archivo como: Index.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ingreso Concentraciones</title>
+  <style>
+    :root{
+      --bg1:#0b1220;
+      --bg2:#0f1b33;
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.10);
+      --text:#e9eefc;
+      --muted:rgba(233,238,252,.72);
+      --stroke:rgba(255,255,255,.14);
+      --shadow:0 12px 35px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 20% 0%, #1b2b55 0%, transparent 55%),
+                  radial-gradient(900px 500px at 80% 20%, #2b1f57 0%, transparent 55%),
+                  linear-gradient(160deg, var(--bg1), var(--bg2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px 18px 70px;
+    }
+
+    .wrap{
+      width:min(980px, 100%);
+    }
+
+    header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:18px;
+    }
+
+    h1{
+      margin:0;
+      font-size: clamp(22px, 3.5vw, 34px);
+      letter-spacing:.3px;
+      line-height:1.15;
+    }
+
+    .subtitle{
+      margin-top:6px;
+      color:var(--muted);
+      font-size: clamp(13px, 1.8vw, 15px);
+    }
+
+    .panel{
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.03));
+      border:1px solid var(--stroke);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:12px;
+    }
+
+    /* Tablet */
+    @media (max-width: 800px){
+      .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      body{ padding-bottom:85px; }
+    }
+
+    /* Celular */
+    @media (max-width: 520px){
+      .grid{ grid-template-columns: 1fr; }
+      .panel{ padding:14px; }
+    }
+
+    .btn{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.16);
+      background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+      color: var(--text);
+      border-radius: 16px;
+      padding: 16px 14px;
+      font-size: 16px;
+      font-weight: 650;
+      cursor: pointer;
+      text-align:left;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      transition: transform .08s ease, background .15s ease, border-color .15s ease;
+      min-height: 64px;
+      width:100%;
+    }
+
+    .btn:hover{
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .btn:active{
+      transform: translateY(1px);
+    }
+
+    .btn small{
+      display:block;
+      color: var(--muted);
+      font-weight: 520;
+      font-size: 12.5px;
+      margin-top:4px;
+    }
+
+    .pill{
+      flex:0 0 auto;
+      padding:8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(233,238,252,.9);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing:.2px;
+    }
+
+    footer.clock{
+      position: fixed;
+      right: 14px;
+      bottom: 12px;
+      padding: 10px 12px;
+      background: rgba(0,0,0,.35);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 14px;
+      color: rgba(233,238,252,.92);
+      font-size: 13px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.35);
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    footer.clock .dot{
+      width:8px; height:8px; border-radius:50%;
+      background: rgba(233,238,252,.85);
+      opacity:.85;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Ingreso concentraciones</h1>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="grid">
+        <!-- OJO: Aquí NO hay links reales. Donde dice INSERTE_LINK, pega tu URL. -->
+        <button class="btn" data-url="https://docs.google.com/forms/d/e/1FAIpQLSezmo7kQAAq5QY97wyJP9OU8ILZKVLxgL6w0EOlgQQIeOMHIw/viewform?usp=header">
+          <div>
+            TRASPASO FACUNDA
+          </div>
+          <span class="pill">ABRIR</span>
+        </button>
+
+        <button class="btn" data-url="https://docs.google.com/forms/d/e/1FAIpQLScydTqRRS9FR76NWgtO1Mg0DXTcfMk1_4baYrre5JP5ZFew1A/viewform?usp=header">
+          <div>
+            TRASPASO SOLEDAD SR
+          </div>
+          <span class="pill">ABRIR</span>
+        </button>
+
+        <button class="btn" data-url="https://docs.google.com/forms/d/e/1FAIpQLSe3zyVHIonLen80YTZS1LqLF3LmtWXCc85GegKG2rxl1j2U1Q/viewform?usp=header">
+          <div>
+            TRASPASO FERMINA SR
+          </div>
+          <span class="pill">ABRIR</span>
+        </button>
+
+        <button class="btn" data-url="https://docs.google.com/forms/d/e/1FAIpQLSefWIsvw9LlkgqB1yIKUIoMBT7UkSOrZsOLGGpqY2HzrF8ERg/viewform?usp=publish-editor">
+          <div>
+            TRASPASO PONTEVEDRA
+          </div>
+          <span class="pill">ABRIR</span>
+        </button>
+
+        <button class="btn" data-url="https://docs.google.com/forms/d/e/1FAIpQLSd5S-d4q49nrc65AVd7eDPlGoyXQ_EZB8uUdV4awrzGJmd_kA/viewform?usp=publish-editor">
+          <div>
+            CANALETA MATRIZ FERMINA SR
+          </div>
+          <span class="pill">ABRIR</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <footer class="clock" aria-label="Fecha y hora de Chile">
+    <span class="dot" aria-hidden="true"></span>
+    <span id="clTime">--/--/---- --:--</span>
+  </footer>
+
+  <script>
+    // Abre en nueva pestaña (mantiene el Index abierto)
+    document.querySelectorAll(".btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const url = (btn.dataset.url || "").trim();
+
+        // Si aún no pegas un link real, avisa.
+        if (!url || url.toUpperCase() === "INSERTE_LINK") {
+          alert("Falta pegar el link en el botón (reemplaza INSERTE_LINK por la URL).");
+          return;
+        }
+
+        // Acepta http/https (recomendado). Si falta, intenta agregar https.
+        const finalUrl = /^https?:\/\//i.test(url) ? url : ("https://" + url);
+        window.open(finalUrl, "_blank", "noopener,noreferrer");
+      });
+    });
+
+    // Fecha y hora Chile (America/Santiago), formato dd/mm/aaaa HH:mm (24h)
+    const out = document.getElementById("clTime");
+    const tz = "America/Santiago";
+
+    function pad2(n){ return String(n).padStart(2, "0"); }
+
+    function updateChileClock(){
+      const now = new Date();
+
+      const parts = new Intl.DateTimeFormat("es-CL", {
+        timeZone: tz,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      }).formatToParts(now);
+
+      const get = (type) => parts.find(p => p.type === type)?.value ?? "";
+      const dd = get("day");
+      const mm = get("month");
+      const yyyy = get("year");
+      const hh = get("hour");
+      const min = get("minute");
+
+      out.textContent = `${dd}/${mm}/${yyyy} ${hh}:${min}`;
+    }
+
+    updateChileClock();
+    setInterval(updateChileClock, 1000);
+  </script>
+</body>
+</html>
